@@ -9,6 +9,10 @@ Allow to start a fresh project with preconfigured bundles :
 To create a new project :
 - clone repository
 - change db parameters in app/config/parameters.yml
+- composer update
+- php app/console doctrine:database:create
+- php app/console doctrine:schema:update --force
+- php app/console doctrine:fixtures:load
 
 A bundle named AppBundle is ready to start with. Some rename operations can set it to your new project name :
 - rename folder src/AppBundle to src/YourBrand/YourBundle

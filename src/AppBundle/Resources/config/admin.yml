@@ -1,13 +1,4 @@
-sonata_block:
-    default_contexts: [cms]
-    blocks:
-        sonata.admin.block.admin_list:
-        sonata.block.service.text: ~
-        sonata.block.service.action: ~
-        sonata.block.service.rss: ~
-        sonata.admin.block.search_result: ~
-        sonata.user.block.menu: ~
-
+#DASHBOARD
 sonata_admin:
     options:
         confirm_exit: false
@@ -15,16 +6,17 @@ sonata_admin:
         blocks:
             -
                 position: bottom
-                class: col-md-12
+                class: col-md-6
                 type: sonata.admin.block.admin_list
                 settings:
                     groups: [sonata.admin.group.name]
 
         groups:
             sonata.admin.group.name:
-                label: "Users"
+                label: "Entities"
                 items:
                     - sonata.admin.user
+                    - sonata.admin.room
 
 
 services:
@@ -36,6 +28,34 @@ services:
             - ~
             - AppBundle\Entity\User
             - ~
+    sonata.admin.room:
+        class: AppBundle\Admin\RoomAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: "Room" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Room
+            - ~
+    sonata.admin.furnitureadmin:
+        class: AppBundle\Admin\FurnitureAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: "Furniture" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Furniture
+            - ~
+
+
+#CONFIG
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+        sonata.block.service.text: ~
+        sonata.block.service.action: ~
+        sonata.block.service.rss: ~
+        sonata.admin.block.search_result: ~
+        sonata.user.block.menu: ~
 
 fos_js_routing:
     routes_to_expose: [ homepage ]

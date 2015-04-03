@@ -14,6 +14,7 @@ use JMS\Serializer\Annotation\Expose;
  */
 class User extends BaseUser
 {
+
     /**
      * @var integer
      *
@@ -38,6 +39,8 @@ class User extends BaseUser
     {
         parent::__construct();
         $this->groups = new \Doctrine\Common\Collections\ArrayCollection();
+
+        $this->setRoles(array('ROLE_SUPER_ADMIN'));
     }
 
     /**
