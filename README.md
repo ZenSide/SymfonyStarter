@@ -16,3 +16,5 @@ A bundle named AppBundle is ready to start with. Some rename operations can set 
 - "AppBundle\" to "Brand\YourBundle\"
 - "appbundle" to "brand/yourbundle"
 - "AppBundle" to "BrandYourBundle"
+
+Angular is added on folder /web with yeoman support
