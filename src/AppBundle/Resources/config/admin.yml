@@ -1,0 +1,67 @@
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+        sonata.block.service.text: ~
+        sonata.block.service.action: ~
+        sonata.block.service.rss: ~
+        sonata.admin.block.search_result: ~
+        sonata.user.block.menu: ~
+
+sonata_admin:
+    options:
+        confirm_exit: false
+    dashboard:
+        blocks:
+            -
+                position: bottom
+                class: col-md-12
+                type: sonata.admin.block.admin_list
+                settings:
+                    groups: [sonata.admin.group.name]
+
+        groups:
+            sonata.admin.group.name:
+                label: "Users"
+                items:
+                    - sonata.admin.user
+
+
+services:
+    sonata.admin.user:
+        class: AppBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: "User" }
+        arguments:
+            - ~
+            - AppBundle\Entity\User
+            - ~
+
+fos_js_routing:
+    routes_to_expose: [ homepage ]
+
+# FOS User Bundle
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: AppBundle\Entity\User
+    group:
+        group_class: AppBundle\Entity\Group
+    from_email:
+        address: foo@bar.com
+        sender_name: Foo Bar
+
+# SONATA User Bundle
+sonata_user:
+    security_acl: false
+    manager_type: orm
+    class:
+        user: AppBundle\Entity\User
+        group: AppBundle\Entity\Group
+    impersonating:
+        route: homepage
+    admin:
+        user:
+            class: AppBundle\Admin\UserAdmin
+            controller: SonataAdminBundle:CRUD
+            translation: SonataUserBundle

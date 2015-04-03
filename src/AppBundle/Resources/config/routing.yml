@@ -1,0 +1,17 @@
+routing_admin:
+    resource: "@AppBundle/Resources/config/routing_admin.yml"
+    prefix:   /
+
+#HOMEPAGE
+homepage:
+    path:     /
+    defaults:
+            _controller: FrameworkBundle:Redirect:urlRedirect
+            path: /admin
+            permanent: true
+
+#rest
+rest :
+  type : rest
+  resource : "routing_rest.yml"
+  prefix : /api
