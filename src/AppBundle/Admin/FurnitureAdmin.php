@@ -21,7 +21,8 @@ class FurnitureAdmin extends Admin
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
-        $formMapper->add('color')->add('material');
+        $formMapper
+            ->add('name')->add('color')->add('material');
     }
 
 }

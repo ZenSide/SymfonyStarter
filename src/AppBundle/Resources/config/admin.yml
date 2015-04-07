@@ -17,7 +17,6 @@ sonata_admin:
                 items:
                     - sonata.admin.user
                     - sonata.admin.room
-                    - sonata.admin.furniture
 
 
 services:
