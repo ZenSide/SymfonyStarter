@@ -1,0 +1,3 @@
+api_users:
+    type: rest
+    resource: "ZenSide\DemoBundle\Controller\Api\UsersController"

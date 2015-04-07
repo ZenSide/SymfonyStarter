@@ -41,7 +41,8 @@ class AppKernel extends Kernel
             // js routing
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
 
-            new \AppBundle\AppBundle()
+            new ZenSide\CoreBundle\ZenSideCoreBundle(),
+            new ZenSide\DemoBundle\ZenSideDemoBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -1,16 +1,11 @@
-app_routes:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+# DEMO (TO REMOVE)
+zen_side_demo:
+    resource: "@ZenSideDemoBundle/Resources/config/routing.yml"
+    prefix:   /
 
 # JS ROUTING
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
 
-app_routing:
-    type: rest
-    resource: "@AppBundle/Resources/config/routing.yml"
-
-app_api:
-    type: rest
-    prefix: /api
-    resource: "@AppBundle/Resources/config/routing_rest.yml"
+core_routing:
+    resource: "@ZenSideCoreBundle/Resources/config/routing.yml"
