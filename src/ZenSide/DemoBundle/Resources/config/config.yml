@@ -1,0 +1,41 @@
+fos_js_routing:
+    routes_to_expose: [ homepage ]
+
+#DASHBOARD
+sonata_admin:
+    options:
+        confirm_exit: false
+    dashboard:
+        blocks:
+            -
+                position: bottom
+                class: col-md-6
+                type: sonata.admin.block.admin_list
+                settings:
+                    groups: [sonata.admin.group.name]
+
+        groups:
+            sonata.admin.group.name:
+                label: "Entities"
+                items:
+                    - sonata.admin.room
+
+
+services:
+    sonata.admin.room:
+        class: ZenSide\DemoBundle\Admin\RoomAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: "Room" }
+        arguments:
+            - ~
+            - ZenSide\DemoBundle\Entity\Room
+            - ~
+
+    sonata.admin.furniture:
+        class: ZenSide\DemoBundle\Admin\FurnitureAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: "Furniture" }
+        arguments:
+            - ~
+            - ZenSide\DemoBundle\Entity\Furniture
+            - ~

@@ -14,11 +14,11 @@ To create a new project :
 - php app/console doctrine:schema:update --force
 - php app/console doctrine:fixtures:load
 
-A bundle named AppBundle is ready to start with. Some rename operations can set it to your new project name :
-- rename folder src/AppBundle to src/YourBrand/YourBundle
-- "namespace AppBundle" to "namespace Brand\YourBundle"
-- "AppBundle\" to "Brand\YourBundle\"
-- "appbundle" to "brand/yourbundle"
-- "AppBundle" to "BrandYourBundle"
+A bundle named ZenSide\CoreBundle is ready to start with. Some rename operations can set it to your new project name :
+- rename folder src/ZenSide\CoreBundle to src/YourBrand/YourBundle
+- "namespace ZenSide\CoreBundle" to "namespace Brand\YourBundle"
+- "ZenSide\CoreBundle\" to "Brand\YourBundle\"
+- "zenside/corebundle" to "brand/yourbundle"
+- "ZenSide\CoreBundle" to "BrandYourBundle"
 
 Angular is added on folder /web with yeoman support

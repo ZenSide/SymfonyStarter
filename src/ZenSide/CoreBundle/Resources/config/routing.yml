@@ -1,0 +1,11 @@
+routing_admin:
+    resource: "routing_admin.yml"
+    prefix:   /
+
+#HOMEPAGE
+homepage:
+    path:     /
+    defaults:
+            _controller: FrameworkBundle:Redirect:urlRedirect
+            path: /admin
+            permanent: true
