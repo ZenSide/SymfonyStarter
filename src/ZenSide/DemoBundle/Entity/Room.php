@@ -168,10 +168,10 @@ class Room
     /**
      * Add furnitures
      *
-     * @param \ZenSide\CoreBundle\Entity\Furniture $furnitures
+     * @param \ZenSide\DemoBundle\Entity\Furniture $furnitures
      * @return Room
      */
-    public function addFurniture(\ZenSide\CoreBundle\Entity\Furniture $furnitures)
+    public function addFurniture(\ZenSide\DemoBundle\Entity\Furniture $furnitures)
     {
         $this->furnitures[] = $furnitures;
 
@@ -181,9 +181,9 @@ class Room
     /**
      * Remove furnitures
      *
-     * @param \ZenSide\CoreBundle\Entity\Furniture $furnitures
+     * @param \ZenSide\DemoBundle\Entity\Furniture $furnitures
      */
-    public function removeFurniture(\ZenSide\CoreBundle\Entity\Furniture $furnitures)
+    public function removeFurniture(\ZenSide\DemoBundle\Entity\Furniture $furnitures)
     {
         $this->furnitures->removeElement($furnitures);
     }

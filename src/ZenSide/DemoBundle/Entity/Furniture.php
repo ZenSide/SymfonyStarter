@@ -130,10 +130,10 @@ class Furniture
     /**
      * Set room
      *
-     * @param \ZenSide\CoreBundle\Entity\Room $room
+     * @param \ZenSide\DemoBundle\Entity\Room $room
      * @return Furniture
      */
-    public function setRoom(\ZenSide\CoreBundle\Entity\Room $room = null)
+    public function setRoom(\ZenSide\DemoBundle\Entity\Room $room = null)
     {
         $this->room = $room;
 
@@ -143,7 +143,7 @@ class Furniture
     /**
      * Get room
      *
-     * @return \ZenSide\CoreBundle\Entity\Room
+     * @return \ZenSide\DemoBundle\Entity\Room
      */
     public function getRoom()
     {

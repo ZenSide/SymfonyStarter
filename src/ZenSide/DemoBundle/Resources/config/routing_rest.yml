@@ -1,3 +1,9 @@
 api_users:
     type: rest
     resource: "ZenSide\DemoBundle\Controller\Api\UsersController"
+api_rooms:
+    type: rest
+    resource: "ZenSide\DemoBundle\Controller\Api\RoomsController"
+api_furnitures:
+    type: rest
+    resource: "ZenSide\DemoBundle\Controller\Api\FurnituresController"

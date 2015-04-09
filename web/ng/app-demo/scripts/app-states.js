@@ -7,21 +7,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('accueil', {
             url: "/",
-            templateUrl: "accueil.html"
+            templateUrl: "views/accueil.html"
         })
         .state('rooms', {
             url: "/rooms",
-            templateUrl: "rooms.html",
+            templateUrl: "views/rooms.html",
             controller: 'RoomCtrl'
         })
         .state('rooms.furnitures', {
-            url: "/furnitures",
-            templateUrl: "furnitures.html",
+            url: "/{roomId}/furnitures",
+            templateUrl: "views/furnitures.html",
             controller: 'FurnitureCtrl'
         })
         .state('users', {
             url: "/users",
-            templateUrl: "users.html",
+            templateUrl: "views/users.html",
             controller: 'UserCtrl'
         })
 });

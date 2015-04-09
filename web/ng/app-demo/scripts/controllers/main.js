@@ -31,11 +31,11 @@ app.controller('RoomCtrl', ['$scope', 'Room','$state', function ($scope, Room,$s
     $scope.rooms = Room.query();
 
     $scope.selectRoom = function (room) {
-        $state.go('room.furniture',{roomId:room.id})
+        $state.go('rooms.furnitures',{roomId:room.id})
     }
 }]);
 
-app.controller('FurnitureCtrl', ['$scope', 'Furniture', '$stateParam',function ($scope, Furniture, $stateParam) {
+app.controller('FurnitureCtrl', ['$scope', 'Room', '$stateParams',function ($scope, Room, $stateParams) {
 
-    $scope.furnitures = Furniture.query();
+    $scope.furnitures = Room.furnitures({id: $stateParams.roomId});
 }]);
