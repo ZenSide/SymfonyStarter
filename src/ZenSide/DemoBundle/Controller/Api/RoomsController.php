@@ -9,6 +9,9 @@ use ZenSide\DemoBundle\Entity\Room;
 
 class RoomsController extends RestController
 {
+    /**
+     * @Rest\View
+     */
     public function getAction(Room $entity){
         return $entity;
     }
@@ -20,6 +23,9 @@ class RoomsController extends RestController
         return $this->getRepository('ZenSideDemoBundle:Room')->findAll();
     }
 
+    /**
+     * @Rest\View
+     */
     public function getFurnituresAction(Room $entity){
         return $entity->getFurnitures();
     }
