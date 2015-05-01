@@ -42,6 +42,8 @@ class AppKernel extends Kernel
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
 
             new ZenSide\CoreBundle\ZenSideCoreBundle(),
+
+            // to remove
             new ZenSide\DemoBundle\ZenSideDemoBundle(),
         );
 

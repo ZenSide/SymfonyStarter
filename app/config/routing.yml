@@ -3,9 +3,5 @@ zen_side_demo:
     resource: "@ZenSideDemoBundle/Resources/config/routing.yml"
     prefix:   /
 
-# JS ROUTING
-fos_js_routing:
-    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
-
 core_routing:
     resource: "@ZenSideCoreBundle/Resources/config/routing.yml"

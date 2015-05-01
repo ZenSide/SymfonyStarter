@@ -3545,15 +3545,16 @@
         {
             "name": "zenside/core-bundle",
             "version": "dev-master",
+            "target-dir": "ZenSide/CoreBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ZenSide/CoreBundle.git",
-                "reference": "a88f347614402b8729a8ec7200586db2b769ee21"
+                "reference": "30f460ff18d31a56875a3e143b97a056ff46f6b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ZenSide/CoreBundle/zipball/a88f347614402b8729a8ec7200586db2b769ee21",
-                "reference": "a88f347614402b8729a8ec7200586db2b769ee21",
+                "url": "https://api.github.com/repos/ZenSide/CoreBundle/zipball/30f460ff18d31a56875a3e143b97a056ff46f6b3",
+                "reference": "30f460ff18d31a56875a3e143b97a056ff46f6b3",
                 "shasum": ""
             },
             "require": {
@@ -3585,7 +3586,7 @@
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
-                    "ZenSide\\BlogBundle": ""
+                    "ZenSide\\CoreBundle": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3600,7 +3601,7 @@
                 }
             ],
             "description": "Bundle with pre-configured full-stack modules (sonata,fos,rest)",
-            "time": "2015-05-01 10:32:53"
+            "time": "2015-05-01 14:02:41"
         }
     ],
     "packages-dev": [],
