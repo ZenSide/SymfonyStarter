@@ -1,0 +1,11 @@
+<md-grid-list
+        md-cols="3" md-row-height="1:1"
+        md-gutter="12px">
+    <md-grid-tile ng-repeat="room in rooms" class="green"
+                  md-colspan="1" md-rowspan="1" ng-click="selectRoom(room)">
+        <md-grid-tile-header>
+            <h3>{{room.name}}</h3>
+        </md-grid-tile-header>
+        <div ui-view="room-{{room.id}}"></div>
+    </md-grid-tile>
+</md-grid-list>

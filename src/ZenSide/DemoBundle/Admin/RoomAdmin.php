@@ -49,6 +49,12 @@ class RoomAdmin extends Admin
         }
     }
 
+    protected function configureListFields(ListMapper $list)
+    {
+        $list->addIdentifier('name');
+    }
+
+
     public function preUpdate($room)
     {
         foreach ($room->getFurnitures() as $f) {

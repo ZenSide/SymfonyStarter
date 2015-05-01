@@ -1,29 +1,69 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="fr" ng-app="ngAppApp">
 <head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1"/>
 
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/colors.css">
+    <!--prefix free script (no browser prefix needed in css-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
-<body ng-app="ngAppApp">
-<!--[if lt IE 8]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
 
-<div class="container">
-    <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
+<body layout="column" ng-controller="MainCtrl">
+
+<md-toolbar layout="row">
+    <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show menu">
+        <ng-md-icon icon="menu"></ng-md-icon>
+    </md-button>
+    <h1>Starter app</h1>
+</md-toolbar>
+
+<div flex layout="row">
+
+    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left">
+        <md-list ng-controller="MenuCtrl">
+            <md-item ng-repeat="item in menu" >
+                <md-button ng-click="selectMenu(item)" ng-class="{'selected' : item === selected}" md-no-ink>
+                    <div class="avatar" ng-init="item.size = SMALL_SIZE">
+                        <ng-md-icon icon="{{item == selected ? item.icon2 : item.icon}}"
+                                    size="{{item.size}}"
+                                    style="fill: {{item == selected ? 'blue' : 'black'}}"
+                                    options='{"rotation": "counterclock"}'>
+                        </ng-md-icon>
+                    </div>
+                    {{item.txt}}
+                </md-button>
+            </md-item>
+        </md-list>
+    </md-sidenav>
+
+    <md-content flex id="content">
+        <section ui-view></section>
+    </md-content>
+
 </div>
+
+</body>
 
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="../bower_components/angular-material/angular-material.min.js"></script>
+<script src="../bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="../bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="../bower_components/ui-router/release/angular-ui-router.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"></script>
 
 <script src="scripts/app.js"></script>
+<script src="scripts/app-states.js"></script>
 <script src="scripts/services/resources.js"></script>
 <script src="scripts/controllers/main.js"></script>
 </body>

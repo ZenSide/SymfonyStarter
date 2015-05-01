@@ -1,5 +1,6 @@
 {
     "name": "zenside/symfony-starter",
+    "description": "Fresh starter project for a new pre-configured Symfony2 REST Client-Server with admin project",
     "license": "proprietary",
     "type": "project",
     "autoload": {
@@ -9,42 +10,7 @@
         }
     },
     "require": {
-      "php": ">=5.3.3",
-      "symfony/symfony": "~2.6",
-
-      "symfony/assetic-bundle": "2.3.*",
-      "symfony/swiftmailer-bundle": "2.3.*",
-      "symfony/monolog-bundle": "2.3.*",
-
-      "sensio/distribution-bundle": "2.3.*",
-      "sensio/framework-extra-bundle": "2.3.*",
-      "sensio/generator-bundle": "~2.3",
-
-      "doctrine/orm": "2.4.*",
-      "doctrine/doctrine-bundle": "1.3.*",
-      "doctrine/doctrine-fixtures-bundle": "2.2.*",
-      "stnw/date-picker-bundle": "dev-master",
-
-      "doctrine/dbal": "2.5.1",
-
-      "twig/extensions": "1.0.*",
-      "gedmo/doctrine-extensions": "v2.3.9",
-      "incenteev/composer-parameter-handler": "~2.0",
-      "nervo/yuicompressor": "2.4.8",
-
-      "friendsofsymfony/user-bundle": "v1.3.4",
-
-      "sonata-project/core-bundle": "dev-master",
-      "sonata-project/datagrid-bundle": "dev-master",
-      "sonata-project/user-bundle": "dev-master",
-      "sonata-project/block-bundle": "dev-master",
-      "sonata-project/admin-bundle": "dev-master",
-      "sonata-project/easy-extends-bundle": "dev-master",
-      "sonata-project/doctrine-orm-admin-bundle": "dev-master",
-
-      "friendsofsymfony/jsrouting-bundle": "1.x-dev",
-      "friendsofsymfony/rest-bundle": "~1.5",
-      "jms/serializer-bundle": "0.13.*"
+      "zenside/core-bundle": "dev-master"
     },
     "require-dev": {
     },
@@ -81,5 +47,6 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }

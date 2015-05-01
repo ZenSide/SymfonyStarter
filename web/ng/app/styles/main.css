@@ -1,83 +1,129 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size:14px;
+    height:100%;
+    margin: 0px;
+    padding: 0px;
 }
 
-body {
-  padding: 0;
+/* Toolbar area */
+
+.menu {
+    background-color: transparent;
+    border: none;
+    height: 38px;
+    margin: 16px;
+    width: 36px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+md-toolbar h1 {
+    margin: auto;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+/* Sidenav area */
+
+md-list .md-button {
+    color: inherit;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
 }
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+md-list .md-button.selected {
+    color: #03a9f4;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+md-sidenav  md-list {
+    padding: 0px 0px 8px 0px;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+
+/* Primary content area */
+
+#content {
+    overflow: hidden;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+#content  {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+#content .md-button.share {
+    background-color: transparent;
+    border: none;
+    width: 48px;
+    height: 48px;
+    margin: 8px auto 16px 0;
+    position: absolute;
+    top: 10px;
+    right: 25px;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+#content ng-md-icon.avatar {
+    margin-top: 10px;
+}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+#content .md-button.share > ng-md-icon {
+    fill:black;
+    width:36px;
+    height:36px;
+}
+
+md-button.menuBtn > ng-md-icon {
+    fill:white;
+    width:24px;
+    height:24px;
+}
+
+#content .md-button.share:active > ng-md-icon {
+    background-color: #dadada;
+    border-radius: 75%;
+    padding:4px;
+    transition: all 100ms ease-out 30ms;
+}
+
+#content img {
+    display: block;
+    height: auto;
+    max-width: 500px;
+}
+
+/* Utils */
+
+.content-wrapper {
+    position: relative;
+}
+
+/* Typography support coming in 0.8.0 */
+
+md-toolbar h1 {
+    font-size: 1.250em;
+    font-weight: 400;
+}
+
+.avatar {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0 15px 0 15px;
+}
+ng-md-icon {
+    fill: white;
+    transition: fill 300ms ease-in-out;
+}
+ng-md-icon > svg {
+    transition: width 300ms ease-in-out, height 750ms ease-in-out;
+}
+
+
+md-bottom-sheet  ng-md-icon {
+    margin-right:20px;
+}
+
+span.name {
+    font-weight: bold;
+    font-size:1.1em;
+    padding-left:5px;
 }

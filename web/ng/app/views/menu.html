@@ -1,0 +1,16 @@
+<md-toolbar class="md-primary">
+    <h1 class="md-toolbar-tools">Sidenav Left</h1>
+</md-toolbar>
+<md-content class="md-padding">
+    <md-list flex>
+        <md-item ng-repeat="item in menu" flex>
+            <md-button ng-click="$state.go(item.state)">
+                <md-item-content>
+                    <div class="md-tile-content">
+                        <h3>{{ item.txt }}</h3>
+                    </div>
+                </md-item-content>
+            </md-button>
+        </md-item>
+    </md-list>
+</md-content>
